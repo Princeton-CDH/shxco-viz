@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Counterfactual Canon visuals</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+  <h1>Counterfactual Canon visuals</h1>
+
+<h2>Figures</h2>
+
+  <ul>
+    <li><a href="gendered-reading-delta/">figure 3</a></li>
+  </ul>
+<hr/>
+
+<div id="embed-code">
+<h2>embed code</h2>
+</div>
+<div id="preview">
+<h2>preview:</h2>
+</div>
+
+<script>
+// TODO: make this code reusable once we have a pattern
+const embedCode = `<iframe
+        width="820"
+        height="540"
+        src="${document.location}gendered-reading-delta/"
+        frameborder="0"
+        title=""
+        loading="lazy"
+      ></iframe>
+`;
+
+const codeDiv = document.getElementById("embed-code");
+const previewDiv = document.getElementById("preview");
+const pre = document.createElement("pre")
+const code = document.createElement("code")
+// display pre-formatted, escaped embed code
+code.innerHTML = embedCode.replace('<', '&lt;');
+pre.append(code);
+codeDiv.append(pre);
+// for preview, add to document as is
+const previewContainer = document.createElement("div");
+previewContainer.innerHTML = embedCode;
+preview.append(previewContainer);
+
+</script>
+  </body>
+</html>

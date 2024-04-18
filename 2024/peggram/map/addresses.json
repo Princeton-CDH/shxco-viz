@@ -1,0 +1,26 @@
+{
+  "addresses": [
+    {
+      "name": "H\u00f4tel des Deux Continents",
+      "street_address": "25 rue Jacob",
+      "city": "Paris",
+      "latitude": "48.85528",
+      "longitude": "2.33446"
+    },
+    {
+      "name": "H\u00f4tel de Seine",
+      "street_address": "52 rue de Seine",
+      "city": "Paris",
+      "arrondissement": "6\u003Csup\u003Ee\u003C/sup\u003E",
+      "latitude": "48.85436",
+      "longitude": "2.33666"
+    },
+    {
+      "name": "Hôtel Saint-André des Arts",
+      "street_address": "66 Rue Saint-André des Arts",
+      "city": "Paris",
+      "latitude": "48.853620",
+      "longitude": "2.338960"
+    }
+  ]
+}
