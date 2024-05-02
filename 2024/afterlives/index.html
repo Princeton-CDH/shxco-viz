@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Afterlives figures</title>
+    <!-- <link rel="stylesheet" href="./styles/shakespeareandco.css"> -->
+    <script type="text/javascript" src="/js/embed.js"></script>
+  </head>
+  <body>
+  <h1>Afterlives figures</h1>
+  <ul>
+    <li><a href="#author">Author Popularity</a></li>
+    <li><a href="#relative">Relative Popularity</a></li>
+  </ul>
+  <hr/>
+
+<div id="author">
+<h2>Author Popularity</h2>
+
+<p><a href="author-popularity/">content</a></p>
+</div>
+
+<div id="relative">
+<h2>Relative Popularity</h2>
+<p><a href="relative-popularity/">content</a></p>
+
+</div>
+
+<script>
+const authorEmbedCode = `<iframe
+        width="100%"
+        style="aspect-ratio: 65 / 49; min-width: 722px; max-height: 80vh"
+        src="${document.location}author-popularity/"
+        frameborder="0"
+        title=""
+        loading="lazy"
+      ></iframe>
+`;
+
+const relativeEmbedCode = `<iframe
+        width="100%"
+        style="aspect-ratio: 4 / 3; min-width: 725px; max-height: 80vh"
+        src="${document.location}relative-popularity/"
+        frameborder="0"
+        title=""
+        loading="lazy"
+      ></iframe>
+`;
+
+
+document.onreadystatechange = () => {
+  if (document.readyState === "interactive") {
+
+    showEmbedCode('author', authorEmbedCode);
+    showEmbedCode('relative', relativeEmbedCode);
+  }
+};
+
+
+
+</script>
+  </body>
+</html>
