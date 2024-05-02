@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Missing Data, Speculative Reading figures</title>
+    <!-- <link rel="stylesheet" href="./styles/shakespeareandco.css"> -->
+    <script type="text/javascript" src="/js/embed.js"></script>
+  </head>
+  <body>
+  <h1>Missing Data, Speculative Reading figures</h1>
+  <ul>
+    <li><a href="#hemingway">Hemingway Borrowing</a></li>
+  </ul>
+  <hr/>
+
+<div id="hemingway">
+<h2>Hemingway Borrowing</h2>
+
+<p><a href="hemingway-borrowing/">content</a></p>
+</div>
+
+</div>
+
+<script>
+const hemingwayEmbedCode = `<iframe
+        width="100%"
+        style="aspect-ratio: 407 / 144; min-width: 600px"
+        src="hemingway-borrowing/"
+        frameborder="0"
+        title=""
+        loading="lazy"
+      ></iframe>
+`;
+
+
+document.onreadystatechange = () => {
+  if (document.readyState === "interactive") {
+    showEmbedCode('hemingway', hemingwayEmbedCode);
+  }
+};
+</script>
+  </body>
+</html>
