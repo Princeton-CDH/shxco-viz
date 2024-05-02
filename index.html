@@ -4,17 +4,32 @@
     <meta charset="utf-8">
     <title>Charts, maps, and visualizations - Shakespeare and Company Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}" />
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}" />
-    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}" />
-    <link rel="mask-icon" href="{% static 'favicon/safari-pinned-tab.svg' %}" color="#E9E9E9" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://shakespeareandco.princeton.edu/static/favicon/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://shakespeareandco.princeton.edu/static/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://shakespeareandco.princeton.edu/static/favicon/favicon-16x16.png' %}" />
+    <link rel="manifest" href="https://shakespeareandco.princeton.edu/static/favicon/site.webmanifest" />
+    <link rel="mask-icon" href="https://shakespeareandco.princeton.edu/static/favicon/safari-pinned-tab.svg" color="#E9E9E9" />
     <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="/styles/shakespeareandco.css">
+    <!-- local copy of compiled production styles as of 2024-05-02 -->
+    <link rel="stylesheet" href="./styles/shakespeareandco.css">
   </head>
   <body>
 
-
+<nav id="main-nav" aria-label="header">
+    <ul class="corners">
+        <li class="home square">
+            <a href="https://shakespeareandco.princeton.edu/" aria-label="home">
+                <img src="https://shakespeareandco.princeton.edu/static/img/logo/SCo_logo_graphic.png" alt="Shakespeare &amp; Company">
+            </a>
+        </li>
+        <!--
+        <li class="menu square">
+            <a id="open-main-menu" href="#main-menu" role="button">
+                <img src="/static/img/icons/Menu.svg" alt="Open main menu">
+            </a>
+        </li> -->
+    </ul>
+  </nav>
 
 <header id="page-header" class="content">
     <img class="bookmark" src="https://shakespeareandco.princeton.edu/static/img/headers/header-bookmark.svg" alt="">
