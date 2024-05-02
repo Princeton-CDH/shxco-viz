@@ -3,50 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>Counterfactual Canon visuals</title>
-    <link rel="stylesheet" href="style.css">
+<!--    <link rel="stylesheet" href="style.css"> -->
+    <script type="text/javascript" src="/js/embed.js"></script>
   </head>
   <body>
-  <h1>Counterfactual Canon visuals</h1>
-
-<h2>Figures</h2>
+  <h1>Counterfactual Canon figures</h1>
 
   <ul>
-    <li><a href="gendered-reading-delta/">figure 3</a></li>
+    <li><a href="#gendered-reading">Gendered Reading Delta</a></li>
   </ul>
-<hr/>
+  <hr/>
 
-<div id="embed-code">
-<h2>embed code</h2>
-</div>
-<div id="preview">
-<h2>preview:</h2>
+
+<div id="gendered-reading">
+<h2>Gendered Reading Delta</h2>
+
+<p><a href="gendered-reading-delta/">content</a></p>
 </div>
 
 <script>
-// TODO: make this code reusable once we have a pattern
 const embedCode = `<iframe
         width="100%"
         style="aspect-ratio: 210 / 150; min-width: 375px"
-        src="${document.location}gendered-reading-delta/"
+        src="gendered-reading-delta/"
         frameborder="0"
         title=""
-        loading="lazy"
-      ></iframe>
-`;
+        loading="lazy"></iframe>`;
 
-const codeDiv = document.getElementById("embed-code");
-const previewDiv = document.getElementById("preview");
-const pre = document.createElement("pre")
-const code = document.createElement("code")
-// display pre-formatted, escaped embed code
-code.innerHTML = embedCode.replace('<', '&lt;');
-pre.append(code);
-codeDiv.append(pre);
-// for preview, add to document as is
-const previewContainer = document.createElement("div");
-previewContainer.innerHTML = embedCode;
-preview.append(previewContainer);
-
+document.onreadystatechange = () => {
+  if (document.readyState === "interactive") {
+    showEmbedCode('gendered-reading', embedCode);
+  }
+};
 </script>
   </body>
 </html>

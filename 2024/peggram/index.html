@@ -3,50 +3,38 @@
   <head>
     <meta charset="utf-8">
     <title>Reed Peggram visuals</title>
-    <link rel="stylesheet" href="style.css">
+<!--    <link rel="stylesheet" href="style.css"> -->
+    <script type="text/javascript" src="/js/embed.js"></script>
   </head>
   <body>
-  <h1>Reed Peggram visuals</h1>
-
-<h2>Figures</h2>
+  <h1>Reed Peggram figures</h1>
 
   <ul>
-    <li><a href="map/">map</a></li>
+    <li><a href="#map">Map</a></li>
   </ul>
-<hr/>
+  <hr/>
 
-<div id="embed-code">
-<h2>embed code</h2>
+<div id="map">
+  <h2>Peggram Map</h2>
+  <p><a href="map/">content</a></p>
 </div>
-<div id="preview">
-<h2>preview:</h2>
-</div>
+
 
 <script>
-// TODO: make this code reusable once we have a pattern
 const embedCode = `<iframe
         width="100%"
         style="aspect-ratio: 4 / 3; max-height: 80vh; min-width: 375px"
-        src="${document.location}map/"
+        src="map/"
         frameborder="0"
         title=""
         loading="lazy"
       ></iframe>
 `;
-
-const codeDiv = document.getElementById("embed-code");
-const previewDiv = document.getElementById("preview");
-const pre = document.createElement("pre")
-const code = document.createElement("code")
-// display pre-formatted, escaped embed code
-code.innerHTML = embedCode.replace('<', '&lt;');
-pre.append(code);
-codeDiv.append(pre);
-// for preview, add to document as is
-const previewContainer = document.createElement("div");
-previewContainer.innerHTML = embedCode;
-preview.append(previewContainer);
-
+document.onreadystatechange = () => {
+  if (document.readyState === "interactive") {
+    showEmbedCode('map', embedCode);
+  }
+};
 </script>
   </body>
 </html>

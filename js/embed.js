@@ -9,6 +9,9 @@ function showEmbedCode(containerId, embedCode) {
     // get the container element where content should be added
     const container = document.getElementById(containerId);
 
+    // make src absolute relative to current location
+    embedCode = embedCode.replace('src="', `src="${document.location}`)
+
     // create code and preview containers and populate
     const codeDiv = document.createElement('div');
     codeDiv.classList.add('embed-code');

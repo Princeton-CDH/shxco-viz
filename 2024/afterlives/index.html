@@ -30,7 +30,7 @@
 const authorEmbedCode = `<iframe
         width="100%"
         style="aspect-ratio: 65 / 49; min-width: 722px; max-height: 80vh"
-        src="${document.location}author-popularity/"
+        src="author-popularity/"
         frameborder="0"
         title=""
         loading="lazy"
@@ -40,24 +40,19 @@ const authorEmbedCode = `<iframe
 const relativeEmbedCode = `<iframe
         width="100%"
         style="aspect-ratio: 4 / 3; min-width: 725px; max-height: 80vh"
-        src="${document.location}relative-popularity/"
+        src="relative-popularity/"
         frameborder="0"
         title=""
         loading="lazy"
       ></iframe>
 `;
 
-
 document.onreadystatechange = () => {
   if (document.readyState === "interactive") {
-
     showEmbedCode('author', authorEmbedCode);
     showEmbedCode('relative', relativeEmbedCode);
   }
 };
-
-
-
 </script>
   </body>
 </html>
