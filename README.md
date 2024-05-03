@@ -20,6 +20,9 @@ Embed code should use iframes. To make iframes responsive, use 100% width
 and an inline style to set an appropriate aspect ratio. Set min and max width
 where appropriate.
 
+For accessibility, iframes should have title attributes and the loaded document
+should also have an appropriate title.
+
 
 ### Notes
 
