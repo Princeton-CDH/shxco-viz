@@ -10,32 +10,43 @@
 
   <ul>
     <li><a href="#borrowers">Figure 9. Number of times Woolf books were borrowed</a></li>
+    <li><a href="#gender">Figure 10. Woolf’s borrowers by gender.</a></li>
     <li><a href="#network">Figure 11.The community of readers of Virginia Woolf’s books</a></li>
   </ul>
 
   <hr/>
 <div id="borrowers">
-<h2>Borrowers</h2>
-
+<h2>Number of times Woolf books were borrowed</h2>
 <p><a href="borrowers/">content</a></p>
+</div>
+
+<div id="gender">
+<h2>Readers by gender</h2>
+<p><a href="gender/">content</a></p>
 </div>
 
 <div id="network">
 <h2>Community of readers</h2>
-
 <p><a href="network/">content</a></p>
 </div>
 
 <script>
-
-// TODO: add static figure; set aspect ratio to max
-
 const borrowersEmbedCode = `<iframe
         width="100%"
         style="aspect-ratio: 100 / 76; min-width: 600px"
         src="borrowers/"
         frameborder="0"
         title="Number of times Woolf books were borrowed"
+        loading="lazy"
+      ></iframe>
+`;
+
+const genderEmbedCode = `<iframe
+        width="100%"
+        style="aspect-ratio: 100 / 76; min-width: 600px"
+        src="gender/"
+        frameborder="0"
+        title="Woolf’s borrowers by gender"
         loading="lazy"
       ></iframe>
 `;
@@ -51,10 +62,10 @@ const networkEmbedCode = `<iframe
       ></iframe>
 `;
 
-
 document.onreadystatechange = () => {
   if (document.readyState === "interactive") {
     showEmbedCode('borrowers', borrowersEmbedCode);
+    showEmbedCode('gender', genderEmbedCode);
     showEmbedCode('network', networkEmbedCode);
   }
 };
