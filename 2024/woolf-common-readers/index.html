@@ -9,13 +9,13 @@
   <h1>Figures for Virginia Woolf’s Common Readers in Paris</h1>
 
   <ul>
-    <li><a href="#borrowers">Figure 9. Number of times Woolf books were borrowed</a></li>
+    <li><a href="#borrows">Figure 9. Number of times Woolf books were borrowed</a></li>
     <li><a href="#gender">Figure 10. Woolf’s borrowers by gender.</a></li>
     <li><a href="#network">Figure 11.The community of readers of Virginia Woolf’s books</a></li>
   </ul>
 
   <hr/>
-<div id="borrowers">
+<div id="borrows">
 <h2>Number of times Woolf books were borrowed</h2>
 <p><a href="borrowers/">content</a></p>
 </div>
@@ -54,7 +54,7 @@ const genderEmbedCode = `<iframe
 const networkEmbedCode = `<iframe
         width="100%"
         style="aspect-ratio: 497 / 390; min-width: 600px; max-height: 80vh; "
-        src="network/""
+        src="network/"
         frameborder="0"
         title="Woolf Borrowers and Purchasers"
         loading="lazy"
@@ -64,7 +64,7 @@ const networkEmbedCode = `<iframe
 
 document.onreadystatechange = () => {
   if (document.readyState === "interactive") {
-    showEmbedCode('borrowers', borrowersEmbedCode);
+    showEmbedCode('borrows', borrowersEmbedCode);
     showEmbedCode('gender', genderEmbedCode);
     showEmbedCode('network', networkEmbedCode);
   }
