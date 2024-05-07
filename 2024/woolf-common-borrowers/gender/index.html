@@ -5,6 +5,11 @@
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@4.17.0"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <style type="text/css">
+    body { /* tableau automatically sets container to 75px of width; limit width */
+      max-width: 125vh;
+    }
+    </style>
 </head>
 <body>
       <div class='tableauPlaceholder' id='viz1715091847179' style='position: relative'>
@@ -14,7 +19,9 @@
       <script type='text/javascript'>
       var divElement = document.getElementById('viz1715091847179');
       var vizElement = divElement.getElementsByTagName('object')[0];
-      vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');
+      vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+
+      var scriptElement = document.createElement('script');
       scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
       vizElement.parentNode.insertBefore(scriptElement, vizElement);
       </script>
