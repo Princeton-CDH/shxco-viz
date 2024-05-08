@@ -1,0 +1,25 @@
+{{/* disabling hugo menus for now */}}
+{{/* partial "menu.html" (dict "menuID" "main" "page" .) */}}
+<nav id="main-nav" aria-label="header">
+    <ul class="corners">
+        <li class="home square">
+            <a href="https://shakespeareandco.princeton.edu/" aria-label="home">
+                <img src="https://shakespeareandco.princeton.edu/static/img/logo/SCo_logo_graphic.png" alt="Shakespeare &amp; Company">
+            </a>
+        </li>
+        <!--
+        <li class="menu square">
+            <a id="open-main-menu" href="#main-menu" role="button">
+                <img src="/static/img/icons/Menu.svg" alt="Open main menu">
+            </a>
+        </li> -->
+    </ul>
+  </nav>
+
+<header id="page-header" class="content">
+    <img class="bookmark" src="https://shakespeareandco.princeton.edu/static/img/headers/header-bookmark.svg" alt="">
+    <h1>{{ .Title }}</h1>
+    <img class="logotype" src="https://shakespeareandco.princeton.edu/static/img/logo/SCo_logo_text.svg" alt="Shakespeare and Company Project">
+    <p class="tagline"></p>
+    <img class="chevron" src="https://shakespeareandco.princeton.edu/static/img/icons/chevron_down.png" alt="">
+</header>

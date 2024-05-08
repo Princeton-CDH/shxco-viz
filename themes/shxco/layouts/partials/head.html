@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width initial-scale=1">
+<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
+{{ partialCached "head/css.html" . }}
+{{ partialCached "head/js.html" . }}
+{{/* reference official s&co project site styles and icons */}}
+<link rel="apple-touch-icon" sizes="180x180" href="https://shakespeareandco.princeton.edu/static/favicon/apple-touch-icon.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="https://shakespeareandco.princeton.edu/static/favicon/favicon-32x32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="https://shakespeareandco.princeton.edu/static/favicon/favicon-16x16.png' %}" />
+<link rel="manifest" href="https://shakespeareandco.princeton.edu/static/favicon/site.webmanifest" />
+<link rel="mask-icon" href="https://shakespeareandco.princeton.edu/static/favicon/safari-pinned-tab.svg" color="#E9E9E9" />
+<meta name="theme-color" content="#ffffff" />
