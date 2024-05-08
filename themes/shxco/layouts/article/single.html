@@ -22,7 +22,7 @@
 {{- end -}}
 
 <hr/>
-<details id="embed">
+<details id="embed" open>
   <summary>How to embed these figures</summary>
   {{ $css := partial "figure/styles.css" . }} {{/* styles for display when embedding; output as string */}}
   {{ transform.Highlight (printf "%s\n" $css ) "css" }}
