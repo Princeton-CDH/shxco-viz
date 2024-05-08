@@ -1,6 +1,7 @@
 ---
 type: article
 title: Figures for Virginia Woolf’s Common Readers in Paris
+shortTitle: Woolf's Common Readers
 figures:
   borrows:
     figure: 9

@@ -8,7 +8,21 @@
     {{ partial "header.html" . }}
   </header>
   <main class="white">
-    {{/* todo: add breadcrumbs here */}}
+    {{ if (.Ancestors | len) }}
+    <nav class="breadcrumbs" aria-label="breadcrumbs">
+    <ol>
+        {{- range .Ancestors.Reverse }}
+      <li class="home">
+        <a href="{{ .RelPermalink }}">{{ if .IsHome }}Home{{ else }}{{ default .Title .Params.shortTitle }}{{ end }}</a>
+      </li>
+      {{- end }}
+      <li>
+        <a href="{{ .RelPermalink }}" aria-current="location">{{ default .Title .Params.shortTitle  }}</a>
+      </li>
+    </ol>
+  </nav>
+  {{ end }}
+
     <article class="main">
     {{ block "main" . }}{{ end }}
     </article>

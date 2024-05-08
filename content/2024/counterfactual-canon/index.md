@@ -1,6 +1,7 @@
 ---
 type: article
 title: Figures for A Counterfactual Canon
+shortTitle: Counterfactual Canon
 figures:
   gendered-reading:
     figure: 3

@@ -1,6 +1,7 @@
 ---
 type: article
 title: Figures for Unpacking Reed Peggram's Library
+shortTitle: Peggram's Library
 figures:
   map:
     figure: 4

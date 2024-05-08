@@ -1,6 +1,7 @@
 ---
 type: article
 title: Figures for The Afterlives of Shakespeare and Company in Online Social Readership
+shortTitle: Afterlives
 figures:
   author:
     figure: 2

@@ -1,6 +1,7 @@
 ---
 type: article
 title: Figures for Missing Data, Speculative Reading
+shortTitle: Missing Data, Speculative Reading
 figures:
   weekly-activity-logbooks:
     figure: 2
