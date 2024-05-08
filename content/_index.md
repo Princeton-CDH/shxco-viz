@@ -11,4 +11,6 @@ Interactive figures for articles jointly published by Modernism/modernity and Jo
 
 - [The Afterlives of Shakespeare and Company in Online Social Readership](2024/afterlives/)
 - [A Counterfactual Canon](2024/counterfactual-canon/)
+- [Unpacking Reed Peggram's Library](2024/peggrams-library/)
 - [Virginia Woolf’s Common Readers in Paris](2024/woolf-common-readers/)
+- [Missing Data, Speculative Reading](2024/missingdata-specreading/)
