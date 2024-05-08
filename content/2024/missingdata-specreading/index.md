@@ -8,7 +8,7 @@ figures:
     title: Weekly activity from logbooks
     src: figures/2024//missingdata-specreading/weekly-activity-logbooks/
     style:
-      aspect-ratio: "128 / 37"      
+      aspect-ratio: "130 / 40"
       min-width: "600px"
   hemingway:
     figure: 12
