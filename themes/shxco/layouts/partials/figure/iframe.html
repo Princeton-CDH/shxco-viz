@@ -5,4 +5,7 @@
   width="100%"
   frameborder="0"
   loading="lazy"
+  {{- if .props.allowfullscreen }}
+  allowfullscreen="yes"
+  {{ end }}
 ></iframe>
