@@ -1,0 +1,47 @@
+{{ define "main" }}
+  <h2>{{ .Title }}</h2>
+  {{ .Content }}
+
+{{/* generate brief list with anchor links */}}
+<h3>Contents</h3>
+<ul>
+{{- range $figureId, $props := .Params.figures -}}
+<li><a href="#{{ $figureId}}">{{ with $props.figure }}Figure {{ . }}.{{ end }} {{ $props.title }} </a></li>
+{{- end -}}
+</ul>
+<hr/>
+
+{{/* display figures */}}
+{{ partial "figure/styles.css" . }} {{/* include styles for display on this page */}}
+
+{{- range $figureId, $props := .Params.figures -}}
+<div id="{{ $figureId }}">
+  <h3>{{ $props.title }}</h3>
+  {{ partial "figure/iframe.html" (dict "figureId" $figureId "props" $props "baseurl" $.Site.BaseURL ) }}
+</div>
+{{- end -}}
+
+<hr/>
+<details id="embed">
+  <summary>How to embed these figures</summary>
+  {{ $css := partial "figure/styles.css" . }} {{/* styles for display when embedding; output as string */}}
+  {{ transform.Highlight (printf "%s\n" $css ) "css" }}
+
+{{- range $figureId, $props := .Params.figures -}}
+{{- $iframe := partial "figure/iframe.html" (dict "figureId" $figureId "props" $props "baseurl" $.Site.BaseURL ) -}}
+  {{ transform.Highlight ( printf "%s\n" $iframe ) "html" }}
+{{- end -}}
+
+<hr/>
+<div>
+{{- range $figureId, $props := .Params.figures -}}
+    <p><a href="{{ $.Site.BaseURL }}{{ $props.src }}">view embed : {{ $props.title }} </a></p>
+  {{- end -}}
+</div>
+</details>
+
+
+{{ end }}{{/* end main section */}}
+
+
+

@@ -1,0 +1,9 @@
+<style type="text/css">
+{{- range $figureId, $props := .Params.figures -}}
+{{ printf "\n iframe#%s { " $figureId }}
+{{- range $attr, $value := $props.style -}}
+  {{ printf "\n  %s: %s;" $attr $value | safeURL }}
+{{- end -}}
+{{ printf "\n  }\n " }}
+{{- end -}}
+</style>

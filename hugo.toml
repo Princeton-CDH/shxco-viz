@@ -2,3 +2,6 @@ baseURL = 'https://viz.shakespeareandco.princeton.edu/'
 languageCode = 'en-us'
 title = 'Charts, maps, and visualizations - Shakespeare and Company Project'
 theme = "shxco"
+
+[markup.goldmark.renderer]
+unsafe= true
