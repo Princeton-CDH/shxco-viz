@@ -1,9 +1,16 @@
 <style type="text/css">
 {{- range $figureId, $props := .Params.figures -}}
+{{- if $props.cssString -}}
+{{ $props.cssString | safeURL }}
+{{/* printf "\n%s\n " $props.cssString */}}
+{{- else -}}
 {{ printf "\n iframe#%s { " $figureId }}
 {{- range $attr, $value := $props.style -}}
+  {{- if ne $value "string" -}}
   {{ printf "\n  %s: %s;" $attr $value | safeURL }}
+  {{- end -}}
 {{- end -}}
 {{ printf "\n  }\n " }}
+{{- end -}}
 {{- end -}}
 </style>
