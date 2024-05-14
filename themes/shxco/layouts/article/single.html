@@ -5,19 +5,20 @@
 {{/* generate brief list with anchor links */}}
 <h3>Contents</h3>
 <ul>
-{{- range $figureId, $props := .Params.figures -}}
-<li><a href="#{{ $figureId}}">{{ with $props.figure }}Figure {{ . }}.{{ end }} {{ $props.title }} </a></li>
+{{- range $figure := sort .Params.figures -}}
+<li><a href="#{{ $figure.id }}">{{ with $figure.number }}Figure {{ . }}.{{ end }} {{ $figure.title }} </a></li>
 {{- end -}}
 </ul>
+
 <hr/>
 
 {{/* display figures */}}
 {{ partial "figure/styles.css" . }} {{/* include styles for display on this page */}}
 
-{{- range $figureId, $props := .Params.figures -}}
-<div id="{{ $figureId }}">
-  <h3>{{ $props.title }}</h3>
-  {{ partial "figure/iframe.html" (dict "figureId" $figureId "props" $props "baseurl" $.Site.BaseURL ) }}
+{{- range $figure := .Params.figures -}}
+<div id="{{ $figure.id }}">
+  <h3>{{ $figure.title }}</h3>
+  {{ partial "figure/iframe.html" (dict "figureId" $figure.id "props" $figure "baseurl" $.Site.BaseURL ) }}
 </div>
 {{- end -}}
 
@@ -27,15 +28,15 @@
   {{ $css := partial "figure/styles.css" . }} {{/* styles for display when embedding; output as string */}}
   {{ transform.Highlight (printf "%s\n" $css ) "css" }}
 
-{{- range $figureId, $props := .Params.figures -}}
-{{- $iframe := partial "figure/iframe.html" (dict "figureId" $figureId "props" $props "baseurl" $.Site.BaseURL ) -}}
+{{- range $figure := .Params.figures  -}}
+{{- $iframe := partial "figure/iframe.html" (dict "figureId" $figure.id "props" $figure "baseurl" $.Site.BaseURL ) -}}
   {{ transform.Highlight ( printf "%s\n" $iframe ) "html" }}
 {{- end -}}
 
 <hr/>
 <div>
-{{- range $figureId, $props := .Params.figures -}}
-    <p><a href="{{ $.Site.BaseURL }}{{ $props.src }}">view embed : {{ $props.title }} </a></p>
+{{- range $figure := .Params.figures -}}
+    <p><a href="{{ $.Site.BaseURL }}{{ $figure.src }}">view embed : {{ $figure.title }} </a></p>
   {{- end -}}
 </div>
 </details>

@@ -3,22 +3,22 @@ type: article
 title: Figures for Missing Data, Speculative Reading
 shortTitle: Missing Data, Speculative Reading
 figures:
-  weekly-activity-logbooks:
-    figure: 2
+  - id: weekly-activity-logbooks
+    number: 2
     title: Weekly activity from logbooks
     src: figures/2024/missingdata-specreading/weekly-activity-logbooks/
     style:
       aspect-ratio: "130 / 40"
       min-width: "600px"
-  hemingway:
-    figure: 12
+  - id: hemingway
+    number: 12
     title: Hemingway's Borrowing
     src: figures/2024/missingdata-specreading/hemingway-borrowing/
     style:
       aspect-ratio: "407 / 144"
       min-width: "600px"
-  recommendation-scores:
-    figure: 14
+  - id: recommendation-scores
+    number: 14
     title: Distributions of Prediction Scores for the Top Books for Ernest Hemingway
     src: figures/2024/missingdata-specreading/recommendation-scores/
     cssString: "
