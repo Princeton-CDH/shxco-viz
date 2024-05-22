@@ -30,8 +30,8 @@ How to make Altair/Vega charts responsive:
 
 ```css
 canvas.marks {
-    max-width: 100%!important;
-    height: auto!important;
+    max-width: 100% !important;
+    height: auto !important;
 }
 ```
 

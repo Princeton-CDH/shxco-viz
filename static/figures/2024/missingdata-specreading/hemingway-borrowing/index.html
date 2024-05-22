@@ -5,14 +5,16 @@
     .error {
         color: red;
     }
-    /* set body margin to zero */
+    /* set body margin to zero,  */
     body {
       margin: 0;
+      text-align: center;
+      aspect-ratio: "407 / 144";  /* match iframe */
     }
     /* make the chart responsive */
     canvas.marks {
-      max-width: 100%;
-      height: auto;
+      max-width: 100% !important;
+      height: auto !important;
     }
   </style>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
