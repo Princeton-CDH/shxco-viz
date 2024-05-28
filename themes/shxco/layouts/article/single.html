@@ -23,8 +23,8 @@
 {{- end -}}
 
 <hr/>
-<details id="embed" open>
-  <summary>How to embed these figures</summary>
+<details id="embed">
+  <summary>How to embed {{ if eq 1 (len (.Params.figures)) }} this figure {{ else }} these figures{{ end }}</summary>
   {{ $css := partial "figure/styles.css" . }} {{/* styles for display when embedding; output as string */}}
   {{ transform.Highlight (printf "%s\n" $css ) "css" }}
 
