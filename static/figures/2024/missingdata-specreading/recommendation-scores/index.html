@@ -84,7 +84,7 @@ input#search {
 .swatch::before {
     content: " ";
     display: inline-block;
-    width: 15px;
+    width: 16px;
     height: 15px;
     margin: 2px 2px 0;
 }
@@ -96,18 +96,28 @@ input#search {
 }
 .swatch.periodboth {
     position: relative;
-    margin: 0 2px;
+    margin: 0 2px 0;
+    padding: 0;
+    width: 16px;
+}
+
+.swatch.periodboth::before {
+    clip-path: polygon(100% 0, 0% 100%, 0 0);
+    margin: 0;
 }
 
 .swatch.periodboth::after {
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    margin: 0;
     background-color: #ff7f0e;
     position: absolute;
-    top: 1px;
-    left: 10px;
-    content: " ";
+    right: 0;
+    bottom: 3px;
     display: inline-block;
-    width: 7px;
+    width: 16px;
     height: 15px;
+    content: " ";
+
 }
 
 #imf {
