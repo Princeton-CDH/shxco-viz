@@ -7,7 +7,9 @@ This site publishes interactive charts, maps, and data visualizations related to
 
 ### The World of Shakespeare and Company (2024)
 
-Interactive figures for articles jointly published by Modernism/modernity and Journal of Cultural Analytics in 2024.
+A special issue co-published by _Modernism/modernity_ and _Journal of Cultural Analytics_ in 2024, edited by Joshua Kotin and Rebecca Sutton Koeser.
+
+Read the [cluster on Modernism/Modernity PrintPlus](https://viz.shakespeareandco.princeton.edu/2024/peggrams-library/) ; read the [issue on Journal of Cultural Analytics](https://culturalanalytics.org/issue/10482).
 
 - [The Afterlives of Shakespeare and Company in Online Social Readership](2024/afterlives/)
 - [A Counterfactual Canon](2024/counterfactual-canon/)
